@@ -64,13 +64,13 @@ body {
 .borger {
     cursor: pointer;
     display: none;
-    font-size: 26px;
+    font-size: 36px;
 }
 
 .close {
     cursor: pointer;
     display: none;
-    font-size: 26px;
+    font-size: 36px;
 }
 
 .header .container .logo {
@@ -106,7 +106,7 @@ body {
 
 }
 
-@media (max-width : 768px) {
+@media (max-width : 767px) {
 
     .header .container .links {
         display: none;

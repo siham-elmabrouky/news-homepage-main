@@ -1,20 +1,30 @@
 const borger = document.querySelector('.borger');
 const clos = document.querySelector('.close');
 const links = document.querySelector('.links');
- borger.addEventListener("onclick",()=>{
-    links. style.display ='block';
+borger.addEventListener("onclick", () => {
+    links.style.display = 'block';
 })
-borger.onclick = function(){
-    links. style.display ='block'; 
-   clos. style.display ='block'; 
-   borger. style.display ='none'; 
+borger.onclick = function () {
+    links.style.display = 'block';
+    clos.style.display = 'block';
+    borger.style.display = 'none';
 
-  
+
 
 }
-clos.onclick = function(){
-    links. style.display ='none'; 
-   clos. style.display ='none'; 
-   borger. style.display ='block'; 
- 
+clos.onclick = function () {
+    links.style.display = 'none';
+    clos.style.display = 'none';
+    borger.style.display = 'block';
+
 }
+const navbarheight = links.getBoundingClientRect().height;
+
+window.addEventListener("scroll", () => {
+    const scrollHeight = window.pageYOffset;
+    if (scrollHeight > navbarheight) {
+        links.style.display = 'none';
+        clos.style.display = 'none';
+        borger.style.display = 'block';
+    }
+});
